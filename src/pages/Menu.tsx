@@ -71,20 +71,22 @@ const categories = [
 
 export const Menu = (): JSX.Element => {
   return (
-    <div className="bg-[#fefff6] overflow-x-hidden w-full relative">
+    <div className="bg-[#fefff6] overflow-x-hidden w-full relative flex flex-col min-h-screen">
       <AnnouncementBanner text="ONTVANG DIRECT JE OFFERTE!" />
 
       <Header navItems={navItems} />
 
-      <MenuComponent
-        description="Alle dranken van onze menukaart worden geserveerd zoals jouw gasten ze willen: warm, iced of precies naar wens."
-        categories={categories}
-      />
+      <main className="flex-1 flex flex-col gap-12 sm:gap-16 lg:gap-24 py-12 sm:py-16">
+        <MenuComponent
+          description="Alle dranken van onze menukaart worden geserveerd zoals jouw gasten ze willen: warm, iced of precies naar wens."
+          categories={categories}
+        />
 
-      <ContactSection
-        title="VRAGEN?"
-        description="Heb je vragen over onze koffie catering, neem gerust contact op."
-      />
+        <ContactSection
+          title="VRAGEN?"
+          description="Heb je vragen over onze koffie catering, neem gerust contact op."
+        />
+      </main>
 
       <Footer socialLinks={socialLinks} copyrightText="MENNOSKOFFIEBAR ©2025" />
     </div>

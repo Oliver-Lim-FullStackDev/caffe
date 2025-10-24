@@ -75,53 +75,51 @@ const socialLinks = [
 ];
 
 export const Landing = (): JSX.Element => {
-  
-  
   return (
-    <div className="bg-[#fefff6] overflow-x-hidden w-full relative">
+    <div className="bg-[#fefff6] overflow-x-hidden w-full relative flex flex-col min-h-screen">
       <AnnouncementBanner text="ONTVANG DIRECT JE OFFERTE!" />
 
       <Header navItems={navItems} />
 
-      <HeroSection
-        title="Specialty Koffie Catering in Friesland"
-        description={<>
-          Van planning tot uitvoering: wij maken koffiecatering makkelijk en zorgeloos.<br /><br />
-          Laat je gasten genieten van onze barista's die ter plekke de lekkerste espresso's, cappuccino's en lattes bereiden met unieke huisgemaakte smaken.
-        </>}
-        imageSrc="./hero-image.png"
-        imageAlt="Coffee cart at event"
-        reviews={{ rating: 5.0, count: 15 }}
-      />
+      <main className="flex-1 flex flex-col gap-12 sm:gap-16 lg:gap-24 py-12 sm:py-16">
+        <HeroSection
+          title="Specialty Koffie Catering in Friesland"
+          description={<>
+            Van planning tot uitvoering: wij maken koffiecatering makkelijk en zorgeloos.<br /><br />
+            Laat je gasten genieten van onze barista's die ter plekke de lekkerste espresso's, cappuccino's en lattes bereiden met unieke huisgemaakte smaken.
+          </>}
+          imageSrc="./hero-image.png"
+          imageAlt="Coffee cart at event"
+          reviews={{ rating: 5.0, count: 15 }}
+        />
 
-      <LogoSection logos={logos} />
+        <LogoSection logos={logos} />
 
-      <ImageTextSection
-        title="Waarom ons?"
-        description="Omdat wij geloven dat koffie meer is dan alleen een drankje. Het is een moment van beleving, gezelligheid en kwaliteit. Met onze mobiele koffiebar brengen wij niet alleen heerlijke koffies, maar ook sfeer en persoonlijke aandacht naar jouw evenement."
-        imageSrc="./barista.png"
-        imageAlt="Barista preparing coffee"
-        imagePosition="left"
-      />
+        <ImageTextSection
+          title="Waarom ons?"
+          description="Omdat wij geloven dat koffie meer is dan alleen een drankje. Het is een moment van beleving, gezelligheid en kwaliteit. Met onze mobiele koffiebar brengen wij niet alleen heerlijke koffies, maar ook sfeer en persoonlijke aandacht naar jouw evenement."
+          imageSrc="./barista.png"
+          imageAlt="Barista preparing coffee"
+          imagePosition="left"
+        />
 
-      <QuoteSection
-        title="Simpel en Direct je Offerte Berekenen"
-        description="Omdat wij geloven dat koffie meer is dan alleen een drankje. Het is een moment van beleving, gezelligheid en kwaliteit. Met onze mobiele koffiebar brengen wij niet alleen heerlijke koffies, maar ook sfeer en persoonlijke aandacht naar jouw evenement."
-        features={features}
-      />
+        <QuoteSection
+          title="Simpel en Direct je Offerte Berekenen"
+          description="Omdat wij geloven dat koffie meer is dan alleen een drankje. Het is een moment van beleving, gezelligheid en kwaliteit. Met onze mobiele koffiebar brengen wij niet alleen heerlijke koffies, maar ook sfeer en persoonlijke aandacht naar jouw evenement."
+          features={features}
+        />
 
-      <TestimonialsSection
-        title="Wat zeggen onze klanten"
-        testimonials={testimonials}
-        overallRating={{ score: 5.0, count: 15 }}
-      />
+        <TestimonialsSection
+          title="Wat zeggen onze klanten"
+          testimonials={testimonials}
+          overallRating={{ score: 5.0, count: 15 }}
+        />
 
-      <div className="mt-20 sm:mt-0">
         <ContactSection
           title="VRAGEN?"
           description="Heb je vragen over onze koffie catering, neem gerust contact op."
         />
-      </div>
+      </main>
 
       <Footer socialLinks={socialLinks} copyrightText="MENNOSKOFFIEBAR ©2025" />
     </div>

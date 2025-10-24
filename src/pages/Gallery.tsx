@@ -41,16 +41,18 @@ const galleryImages = [
 
 export const Gallery = (): JSX.Element => {
   return (
-    <div className="bg-[#fefff6] overflow-x-hidden w-full relative">
+    <div className="bg-[#fefff6] overflow-x-hidden w-full relative flex flex-col min-h-screen">
       <AnnouncementBanner text="ONTVANG DIRECT JE OFFERTE!" />
 
       <Header navItems={navItems} />
 
-      <GallerySection
-        title="Galerij"
-        subtitle="Neem een kijkje in onze atmosfeer."
-        images={galleryImages}
-      />
+      <main className="flex-1 flex flex-col py-12 sm:py-16">
+        <GallerySection
+          title="Galerij"
+          subtitle="Neem een kijkje in onze atmosfeer."
+          images={galleryImages}
+        />
+      </main>
 
       <Footer socialLinks={socialLinks} copyrightText="MENNOSKOFFIEBAR ©2025" />
     </div>

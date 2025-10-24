@@ -32,16 +32,18 @@ const features = [
 
 export const Offer = (): JSX.Element => {
   return (
-    <div className="bg-[#fefff6] overflow-x-hidden w-full relative">
+    <div className="bg-[#fefff6] overflow-x-hidden w-full relative flex flex-col min-h-screen">
       <AnnouncementBanner text="ONTVANG DIRECT JE OFFERTE!" />
 
       <Header navItems={navItems} />
 
-      <QuoteSection
-        title="Simpel en Direct je Offerte Berekenen"
-        description="Omdat wij geloven dat koffie meer is dan alleen een drankje. Het is een moment van beleving, gezelligheid en kwaliteit. Met onze mobiele koffiebar brengen wij niet alleen heerlijke koffies, maar ook sfeer en persoonlijke aandacht naar jouw evenement."
-        features={features}
-      />
+      <main className="flex-1 flex flex-col py-12 sm:py-16">
+        <QuoteSection
+          title="Simpel en Direct je Offerte Berekenen"
+          description="Omdat wij geloven dat koffie meer is dan alleen een drankje. Het is een moment van beleving, gezelligheid en kwaliteit. Met onze mobiele koffiebar brengen wij niet alleen heerlijke koffies, maar ook sfeer en persoonlijke aandacht naar jouw evenement."
+          features={features}
+        />
+      </main>
 
       <Footer socialLinks={socialLinks} copyrightText="MENNOSKOFFIEBAR ©2025" />
 

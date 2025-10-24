@@ -28,36 +28,38 @@ const socialLinks = [
 
 export const Pricing = (): JSX.Element => {
   return (
-    <div className="bg-[#fefff6] overflow-x-hidden w-full relative">
+    <div className="bg-[#fefff6] overflow-x-hidden w-full relative flex flex-col min-h-screen">
       <AnnouncementBanner text="ONTVANG DIRECT JE OFFERTE!" />
 
       <Header navItems={navItems} />
 
-      <HeroSection
-        title="Tarieven"
-        description={<>
-          Iedere gelegenheid is uniek. Daarom berekenen wij ons tarief op basis van jouw wensen: het menu, het aantal gasten en eventuele extra’s. Met onze rekentool zie je direct een prijsindicatie op maat.
-          <br /><br />
+      <main className="flex-1 flex flex-col gap-12 sm:gap-16 lg:gap-24 py-12 sm:py-16">
+        <HeroSection
+          title="Tarieven"
+          description={<>
+            Iedere gelegenheid is uniek. Daarom berekenen wij ons tarief op basis van jouw wensen: het menu, het aantal gasten en eventuele extra’s. Met onze rekentool zie je direct een prijsindicatie op maat.
+            <br /><br />
 
-          Zo werkt het:
-          <ul className="list-disc ml-6">
-            <li><b>Directe prijsindicatie:</b> jouw tarief wordt berekend op basis van aantal gasten, duur van de service en eventuele reisafstand.</li>
-            <li><b>Snel & eenvoudig:</b> ons formulier is binnen een klikken ingevuld en je hebt direct een duidelijke prijs.</li>
-            <li><b>Altijd inzicht:</b> check meteen onze beschikbaarheid voor jouw gewenste datum.</li>
-            <li><b>Transparant & eerlijk:</b> geen verborgen kosten, altijd helder wat je betaalt.</li>
-            <li><b>Flexibel:</b> geschikt voor uiteenlopende budgetten en evenementen.</li>
-            <li><b>Makkelijk boeken:</b> ben je tevreden met de offerte, dan is boeken binnen enkele minuten geregeld.</li>
-          </ul>
-        </>}
-        imageSrc="./hero-image.png"
-        imageAlt="Coffee cart at event"
-        reviews={{ rating: 5.0, count: 15 }}
-      />
+            Zo werkt het:
+            <ul className="list-disc ml-6">
+              <li><b>Directe prijsindicatie:</b> jouw tarief wordt berekend op basis van aantal gasten, duur van de service en eventuele reisafstand.</li>
+              <li><b>Snel & eenvoudig:</b> ons formulier is binnen een klikken ingevuld en je hebt direct een duidelijke prijs.</li>
+              <li><b>Altijd inzicht:</b> check meteen onze beschikbaarheid voor jouw gewenste datum.</li>
+              <li><b>Transparant & eerlijk:</b> geen verborgen kosten, altijd helder wat je betaalt.</li>
+              <li><b>Flexibel:</b> geschikt voor uiteenlopende budgetten en evenementen.</li>
+              <li><b>Makkelijk boeken:</b> ben je tevreden met de offerte, dan is boeken binnen enkele minuten geregeld.</li>
+            </ul>
+          </>}
+          imageSrc="./hero-image.png"
+          imageAlt="Coffee cart at event"
+          reviews={{ rating: 5.0, count: 15 }}
+        />
 
-      <ContactSection
-        title="VRAGEN?"
-        description="Heb je vragen over onze koffie catering, neem gerust contact op."
-      />
+        <ContactSection
+          title="VRAGEN?"
+          description="Heb je vragen over onze koffie catering, neem gerust contact op."
+        />
+      </main>
 
       <Footer socialLinks={socialLinks} copyrightText="MENNOSKOFFIEBAR ©2025" />
     </div>
