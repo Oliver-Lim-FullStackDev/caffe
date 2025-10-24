@@ -1,0 +1,2 @@
+export const GOOGLE_PLACES_API_KEY =
+  import.meta.env.VITE_GOOGLE_PLACES_API_KEY || "YOUR_API_KEY_HERE";
