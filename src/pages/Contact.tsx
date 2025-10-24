@@ -27,12 +27,14 @@ const socialLinks = [
 
 export const Contact = (): JSX.Element => {
   return (
-    <div className="bg-[#fefff6] overflow-x-hidden w-full relative">
+    <div className="bg-[#fefff6] overflow-x-hidden w-full relative flex flex-col min-h-screen">
       <AnnouncementBanner text="ONTVANG DIRECT JE OFFERTE!" />
 
       <Header navItems={navItems} />
 
-      <ContactComponent />
+      <main className="flex-1 flex flex-col py-12 sm:py-16">
+        <ContactComponent />
+      </main>
 
       <Footer socialLinks={socialLinks} copyrightText="MENNOSKOFFIEBAR ©2025" />
     </div>

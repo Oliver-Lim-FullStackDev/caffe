@@ -69,51 +69,53 @@ const socialLinks = [
 
 export const Services = (): JSX.Element => {
   return (
-    <div className="bg-[#fefff6] overflow-x-hidden w-full relative">
+    <div className="bg-[#fefff6] overflow-x-hidden w-full relative flex flex-col min-h-screen">
       <AnnouncementBanner text="ONTVANG DIRECT JE OFFERTE!" />
 
       <Header navItems={navItems} />
 
-      <HeroSection
-        title="Koffie Catering"
-        description={<>
-          Van planning tot uitvoering: wij maken koffiecatering makkelijk en zorgeloos.<br /><br />
-          Laat je gasten genieten van onze barista's die ter plekke de lekkerste espresso's, cappuccino's en lattes bereiden met unieke huisgemaakte smaken.
-        </>}
-        imageSrc="./hero-image.png"
-        imageAlt="Coffee cart at event"
-        reviews={{ rating: 5.0, count: 15 }}
-      />
+      <main className="flex-1 flex flex-col gap-12 sm:gap-16 lg:gap-24 py-12 sm:py-16">
+        <HeroSection
+          title="Koffie Catering"
+          description={<>
+            Van planning tot uitvoering: wij maken koffiecatering makkelijk en zorgeloos.<br /><br />
+            Laat je gasten genieten van onze barista's die ter plekke de lekkerste espresso's, cappuccino's en lattes bereiden met unieke huisgemaakte smaken.
+          </>}
+          imageSrc="./hero-image.png"
+          imageAlt="Coffee cart at event"
+          reviews={{ rating: 5.0, count: 15 }}
+        />
 
-      <LogoSection logos={logos} />
+        <LogoSection logos={logos} />
 
-      <ImageTextSection
-        title="Wat is Custom Branding?"
-        description={<>
-          Geef jouw event een persoonlijke touch met onze custom branding. Wij passen de koffie-ervaring aan op jouw merk of thema, zodat alles perfect aansluit.<br /><br />
-          Mogelijkheden:
-          <ul className="list-disc ml-6">
-            <li>Bar - jouw tarief wordt berekend op basis van aantal gasten, duur van de service en eventuele reisafstand.</li>
-            <li>Bekers - ons formulier is binnen een klikken ingevuld en je hebt direct een duidelijke prijs.</li>
-            <li>Custom drankjes - geen verborgen kosten, altijd helder wat je betaalt.</li>
-          </ul><br />
-          Zo wordt onze mobiele koffiebar niet alleen een smaakbeleving, maar ook een echte eyecatcher.
-        </>}
-        imageSrc="./barista.png"
-        imageAlt="Barista preparing coffee"
-        imagePosition="left"
-      />
+        <ImageTextSection
+          title="Wat is Custom Branding?"
+          description={<>
+            Geef jouw event een persoonlijke touch met onze custom branding. Wij passen de koffie-ervaring aan op jouw merk of thema, zodat alles perfect aansluit.<br /><br />
+            Mogelijkheden:
+            <ul className="list-disc ml-6">
+              <li>Bar - jouw tarief wordt berekend op basis van aantal gasten, duur van de service en eventuele reisafstand.</li>
+              <li>Bekers - ons formulier is binnen een klikken ingevuld en je hebt direct een duidelijke prijs.</li>
+              <li>Custom drankjes - geen verborgen kosten, altijd helder wat je betaalt.</li>
+            </ul><br />
+            Zo wordt onze mobiele koffiebar niet alleen een smaakbeleving, maar ook een echte eyecatcher.
+          </>}
+          imageSrc="./barista.png"
+          imageAlt="Barista preparing coffee"
+          imagePosition="left"
+        />
 
-      <TestimonialsSection
-        title="Wat zeggen onze klanten"
-        testimonials={testimonials}
-        overallRating={{ score: 5.0, count: 15 }}
-      />
+        <TestimonialsSection
+          title="Wat zeggen onze klanten"
+          testimonials={testimonials}
+          overallRating={{ score: 5.0, count: 15 }}
+        />
 
-      <ContactSection
-        title="VRAGEN?"
-        description="Heb je vragen over onze koffie catering, neem gerust contact op."
-      />
+        <ContactSection
+          title="VRAGEN?"
+          description="Heb je vragen over onze koffie catering, neem gerust contact op."
+        />
+      </main>
 
       <Footer socialLinks={socialLinks} copyrightText="MENNOSKOFFIEBAR ©2025" />
     </div>

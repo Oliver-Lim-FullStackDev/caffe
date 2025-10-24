@@ -22,7 +22,7 @@ export const ContactSection = ({
   }
   
   return (
-    <section className="relative px-4 sm:px-8 lg:px-[135px] py-16 sm:py-24 lg:py-[178px] mb-12 sm:mb-16 lg:mb-[100px] max-w-[1440px] mx-auto">
+    <section className="relative px-4 sm:px-8 lg:px-[135px] py-16 sm:py-24 lg:py-[178px] mb-0 lg:mb-[100px] max-w-[1440px] mx-auto">
       <div className="absolute inset-0 mx-4 sm:mx-8 lg:mx-[135px] bg-black rounded-none" />
 
       <div className="relative z-10 flex flex-col items-center text-center px-4">
